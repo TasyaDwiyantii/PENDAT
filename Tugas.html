@@ -150,8 +150,8 @@
       
     
     
-    <img src="assets/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="assets/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="assets/logo.png" class="logo__.image/image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="assets/logo.png" class="logo__.image/image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -1360,7 +1360,7 @@ Successfully installed mysql-connector-python-8.3.0
 <p>dalam metode imputasi KNN, kita mencari nilai yang hilang dengan mencari tetangga terdekat atau nilai yang paling mirip dengan nilai yang hilang. kita menggunakan rumus Euclidean untuk menghitung jarak antara nilai yang hilang dengan nilai-nilai yang sudah ada</p>
 <section id="rumus-euclidean-distance">
 <h2>rumus Euclidean Distance<a class="headerlink" href="#rumus-euclidean-distance" title="Link to this heading">#</a></h2>
-<img src="image-20240320-201931.png" width="" align="" /></section>
+<img src=".image/image-20240320-201931.png" width="" align="" /></section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="identifikasi-masalah">
 <h1>identifikasi masalah<a class="headerlink" href="#identifikasi-masalah" title="Link to this heading">#</a></h1>
@@ -1986,7 +1986,7 @@ Successfully installed mysql-connector-python-8.3.0
 <h3>k-distance dan k-neighbors<a class="headerlink" href="#k-distance-dan-k-neighbors" title="Link to this heading">#</a></h3>
 <p>k-distance adalah jarak antara suatu titik data dengan titik data terdekat ke-k, dengan nilai k telah ditentukan sebelumnya. fokus dari perhitungan k-distance adalah untuk menilai kerapatan lokal sebuah titik data dengan mengukur jaraknya terhadap tetangga-tetangganya. semakin besar nilai k-distance, semakin rendah tingkat kerapatan lokal titik data tersebut.
 sekelompok titik data yang terdekat dengan sebuah titik data tertentu disebut sebagai k-neighbors. dalam konteks lof, tetangga k digunakan untuk menghitung kepadatan lokal (local reachability density/lrd) dan faktor outlier lokal (local outlier factor/lof). jumlah k-neighbors yang digunakan akan berpengaruh pada hasil deteksi outlier. semakin besar nilai k, semakin banyak tetangga yang akan dipertimbangkan dalam perhitungan lrd dan lof. meskipun ini dapat menghasilkan estimasi yang lebih stabil, namun juga memerlukan waktu komputasi yang lebih lama.</p>
-<img src="image-20240321-042402.png" width="" align="" /><p>contoh tersebut jika k=3 maka tetangga terdekatnya 2 class B dan satu kelas A, dan jika k=6 maka tetangga terdekatnya yaitu 4 class A dan 3 class B</p>
+<img src=".image/image-20240321-042402.png" width="" align="" /><p>contoh tersebut jika k=3 maka tetangga terdekatnya 2 class B dan satu kelas A, dan jika k=6 maka tetangga terdekatnya yaitu 4 class A dan 3 class B</p>
 </section>
 <section id="reachability-distance-rd">
 <h3>reachability distance (RD)<a class="headerlink" href="#reachability-distance-rd" title="Link to this heading">#</a></h3>
@@ -1995,11 +1995,11 @@ sekelompok titik data yang terdekat dengan sebuah titik data tertentu disebut se
 <section id="local-reachability-density-lrd">
 <h3>local reachability density (LRD)<a class="headerlink" href="#local-reachability-density-lrd" title="Link to this heading">#</a></h3>
 <p>rumus umumnya :</p>
-<img src="image-20240321-042802.png" width="" align="" /><p>x adalah titik data yang di evaluasi, y adalah salah satu dari k-neighbors terdekat dari x, dan RD(x,y) adalah reachability distance antara x dan y tinggi nilai LRD sebuah titik data, semakin dekat titik data tersebut dengan tetangga-tetangganya.</p>
+<img src=".image/image-20240321-042802.png" width="" align="" /><p>x adalah titik data yang di evaluasi, y adalah salah satu dari k-neighbors terdekat dari x, dan RD(x,y) adalah reachability distance antara x dan y tinggi nilai LRD sebuah titik data, semakin dekat titik data tersebut dengan tetangga-tetangganya.</p>
 </section>
 <section id="local-outlier-factor-lof">
 <h3>local outlier factor (LOF)<a class="headerlink" href="#local-outlier-factor-lof" title="Link to this heading">#</a></h3>
-<img src="image-20240321-043310.png" width="" align="" /><p>lrd dari setiap titik digunakan untuk membandingkannya dengan rata-rata lrd dari tetangga k-nya. lof merupakan perbandingan antara rata-rata lrd dari tetangga k sebuah titik a dengan lrd dari titik a itu sendiri.
+<img src=".image/image-20240321-043310.png" width="" align="" /><p>lrd dari setiap titik digunakan untuk membandingkannya dengan rata-rata lrd dari tetangga k-nya. lof merupakan perbandingan antara rata-rata lrd dari tetangga k sebuah titik a dengan lrd dari titik a itu sendiri.
 jika suatu titik bukan outlier (inlier), rata-rata lrd dari tetangga k-nya akan mirip dengan lrd dari titik tersebut (karena kerapatan titik dan tetangganya hampir sama). dalam situasi ini, lof akan mendekati nilai 1. sebaliknya, jika suatu titik adalah outlier, lrd dari titik tersebut akan lebih rendah dari rata-rata lrd dari tetangga k-nya. dengan demikian, nilai lof akan tinggi.
 meskipun lof &gt; 1 sering dianggap sebagai tanda adanya outlier, namun ini tidak selalu benar. misalnya, jika kita mengetahui bahwa hanya ada satu outlier dalam data, maka kita bisa mengambil nilai lof maksimum dari semua titik dan mempertimbangkan titik yang sesuai dengan nilai lof maksimum sebagai outlier.</p>
 </section>
@@ -2021,30 +2021,30 @@ meskipun lof &gt; 1 sering dianggap sebagai tanda adanya outlier, namun ini tida
 <li><p>Menghitung Local Outlier Factor (LOF)</p></li>
 </ol>
 <p>tentukan data yang akan digunakan untuk melakukan perhitungan manual. contoh data kain yang memiliki 3 fitur yaitu harga, panjang, berat yang masing-masing bertipe data numeric dan berjumlah 10</p>
-<img src="image-20240321-053153.png" width="" align="" /></section>
+<img src=".image/image-20240321-053153.png" width="" align="" /></section>
 <section id="menghitung-jarak-dan-menentukan-tetangga">
 <h2>menghitung jarak dan menentukan tetangga<a class="headerlink" href="#menghitung-jarak-dan-menentukan-tetangga" title="Link to this heading">#</a></h2>
 <p>pada perhitungan KNN menggunakan metode euclidean dengan menggunakan k=3</p>
-<img src="image-20240321-053219.png" width="" align="" /></section>
+<img src=".image/image-20240321-053219.png" width="" align="" /></section>
 <section id="menghitung-reachability-distance-rd">
 <h2>menghitung reachability distance (RD)<a class="headerlink" href="#menghitung-reachability-distance-rd" title="Link to this heading">#</a></h2>
 <p>selanjutnya menghitung nilai reachability distance dari masing-masing objek. tetapi harus menentukan terlebih dahulu berapa banyak objek yang masuk ke ruang lingkup tetangga ke-n dari suatu objek. bisa dituliskan seperti ini: k-distance neighborhood of o, Nk(o) = {o’| o’ in D, dist(o, o’) ≤ distk(o)}</p>
 <p>contohnya pada objek kain A memiliki nilai jarak tetangga ke-3 yaitu 1.414213562 berarti yang masuk ke lingkupnya yaitu nilai yang kurang atau sama dengan 1.414213562.</p>
-<img src="image-20240321-054328.png" width="" align="" /><p>selanjutnya menghitung reachability distance dari masing-masing objek, dengan rumus :</p>
-<img src="image-20240321-054456.png" width="" align="" /><p>maka reachability keseluruhannya yaitu :</p>
-<img src="image-20240321-054553.png" width="" align="" /></section>
+<img src=".image/image-20240321-054328.png" width="" align="" /><p>selanjutnya menghitung reachability distance dari masing-masing objek, dengan rumus :</p>
+<img src=".image/image-20240321-054456.png" width="" align="" /><p>maka reachability keseluruhannya yaitu :</p>
+<img src=".image/image-20240321-054553.png" width="" align="" /></section>
 <section id="menghitung-local-reachability-distance-lrd">
 <h2>menghitung local reachability distance (LRD)<a class="headerlink" href="#menghitung-local-reachability-distance-lrd" title="Link to this heading">#</a></h2>
 <p>selanjutnya melakukan perhitungan local reachability distance (LRD), LRD dirumuskan :</p>
-<img src="image-20240321-054741.png" width="" align="" /><p>LRD merupakah hasil dari pembagian banyak jumlah tetangga ke-n dari suatu objek dibagi dengan total dari reachability distance objek</p>
+<img src=".image/image-20240321-054741.png" width="" align="" /><p>LRD merupakah hasil dari pembagian banyak jumlah tetangga ke-n dari suatu objek dibagi dengan total dari reachability distance objek</p>
 <p>berikut hasil perhitungannya</p>
-<img src="image-20240321-055243.png" width="" align="" /></section>
+<img src=".image/image-20240321-055243.png" width="" align="" /></section>
 <section id="menghitung-local-outlier-factor-lof">
 <h2>menghitung local outlier factor (LOF)<a class="headerlink" href="#menghitung-local-outlier-factor-lof" title="Link to this heading">#</a></h2>
 <p>rumus :</p>
-<img src="image-20240321-055343.png" width="" align="" /><p>LOF merupakah hasil perkalian jumlah nilai LRD suatu objek dikali dengan reachability distance suatu objek</p>
+<img src=".image/image-20240321-055343.png" width="" align="" /><p>LOF merupakah hasil perkalian jumlah nilai LRD suatu objek dikali dengan reachability distance suatu objek</p>
 <p>berikut hasil perhitungannya :</p>
-<img src="image-20240321-055512.png" width="" align="" /><p>dapat disimpulkan bahwa lof3(F) merupakan outlier dikarenakan rentang nilainya sangat berbeda jauh</p>
+<img src=".image/image-20240321-055512.png" width="" align="" /><p>dapat disimpulkan bahwa lof3(F) merupakan outlier dikarenakan rentang nilainya sangat berbeda jauh</p>
 </section>
 <section id="menghitung-menggunakan-python-scikit-learn">
 <h2>menghitung menggunakan python (scikit learn)<a class="headerlink" href="#menghitung-menggunakan-python-scikit-learn" title="Link to this heading">#</a></h2>
@@ -2261,11 +2261,11 @@ Successfully installed mysql-connector-python-8.3.0
 <span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
-<img alt="_images/8c6523f1cb6771c4db6b015f3c97c143cf1d6243ffcd68ef5571a1f99ee1c3f5.png" src="_images/8c6523f1cb6771c4db6b015f3c97c143cf1d6243ffcd68ef5571a1f99ee1c3f5.png" />
+<img alt="_.image/images/8c6523f1cb6771c4db6b015f3c97c143cf1d6243ffcd68ef5571a1f99ee1c3f5.png" src="_.image/images/8c6523f1cb6771c4db6b015f3c97c143cf1d6243ffcd68ef5571a1f99ee1c3f5.png" />
 </div>
 </div>
 <a style='text-decoration:none;line-height:16px;display:flex;color:#5B5B62;padding:10px;justify-content:end;' href='https://deepnote.com?utm_source=created-in-deepnote-cell&projectId=23905452-9db2-4401-b17a-b0565c5b6809' target="_blank">
-<img alt='Created in deepnote.com' style='display:inline;max-height:16px;margin:0px;margin-right:7.5px;' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+' > </img>
+<img alt='Created in deepnote.com' style='display:inline;max-height:16px;margin:0px;margin-right:7.5px;' src='data:.image/image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+' > </img>
 Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></section>
 </section>
 
