@@ -57,7 +57,7 @@
     <script async="async" src="assets/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas (1)';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
@@ -197,6 +197,7 @@
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
@@ -269,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas (1).html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +300,7 @@
       
       
       
-      <li><a href="_sources/Tugas.ipynb" target="_blank"
+      <li><a href="_sources/Tugas (1).ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -431,6 +432,23 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-local-outlier-factor-pada-data-iris">implementasi local outlier factor pada data iris</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-gaussian-naive-bayes">metode gaussian naive bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-naive-bayes">perhitungan manual naive bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-excel">implementasi excel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-data-train-dan-data-test">membagi data menjadi data train dan data test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-probabilitas-pada-data-train">menghitung probabilitas pada data train</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-standart-deviasi">menghitung standart deviasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-inputan">membuat inputan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-distribusi-gaussian">menghitung distribusi gaussian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-posteriori">menghitung posteriori</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-maximum-posteriori">menentukan maximum posteriori</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">kesimpulan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-skylearn">implementasi skylearn</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -474,8 +492,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                     </span>Traceback (most recent call last)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_1</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;ALTER TABLE tableName DROP COLUMN PetalWidthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_6E3D47CF_6427_41F2_8143_86FCE9381E4A&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df_1</span>
@@ -587,7 +605,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mysql-connector-python
   Downloading mysql_connector_python-8.3.0-cp39-cp39-manylinux_2_17_x86_64.whl (21.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">21.5/21.5 MB</span> <span class=" -Color -Color-Red">59.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">21.5/21.5 MB</span> <span class=" -Color -Color-Red">54.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hInstalling collected packages: mysql-connector-python
 Successfully installed mysql-connector-python-8.3.0
 
@@ -2264,9 +2282,200 @@ Successfully installed mysql-connector-python-8.3.0
 <img alt="_./image/images/8c6523f1cb6771c4db6b015f3c97c143cf1d6243ffcd68ef5571a1f99ee1c3f5.png" src="_./image/images/8c6523f1cb6771c4db6b015f3c97c143cf1d6243ffcd68ef5571a1f99ee1c3f5.png" />
 </div>
 </div>
+<p>pada grafik diatas dapat dilihat ada beberapa titik yang berdekatan dan saling berjauhan, dimana data yang sangat jauh jaraknya dengan rata-rata nilai data yang ada di tandai dengan warna merah, dan data itu termasuk outlier.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="modelling">
+<h1>Modelling<a class="headerlink" href="#modelling" title="Link to this heading">#</a></h1>
+<section id="metode-gaussian-naive-bayes">
+<h2>metode gaussian naive bayes<a class="headerlink" href="#metode-gaussian-naive-bayes" title="Link to this heading">#</a></h2>
+<p>Gaussian Naive Bayes adalah cara untuk mengelompokkan data menggunakan matematika probabilitas dan Distribusi Gaussian atau Distribusi Normal. Dalam metode ini, kita mengasumsikan bahwa setiap ciri (atau faktor) dalam data tidak terkait satu sama lain ketika memprediksi hasilnya. Hasil prediksi akhir didapatkan dengan menggabungkan prediksi dari setiap ciri, dan kemudian kita melihat probabilitasnya untuk menentukan kelas mana yang paling mungkin. Jadi, jika probabilitas hasil tertentu lebih tinggi dari probabilitas hasil lainnya, data tersebut diklasifikasikan ke dalam kelas yang sesuai dengan hasil tersebut.</p>
+<img src="./image/image-20240403-203530.png" width="" align="" /></section>
+<section id="perhitungan-manual-naive-bayes">
+<h2>perhitungan manual naive bayes<a class="headerlink" href="#perhitungan-manual-naive-bayes" title="Link to this heading">#</a></h2>
+<p>langkah-langkah perhitungan pada naive bayes yaitu :</p>
+<ol class="arabic simple">
+<li><p>pada seluruh data kita harus membagi data 90% sebagai data train, 10% sebagai data test atau ada yang memakai 80% sebagai data train, dan 20% data test. disini akan menggunakan 80 dan 20</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>menghitung probabilitas data train</p></li>
+</ol>
+<img src="./image/image-20240403-203857.png" width="" align="" /><ol class="arabic simple" start="3">
+<li><p>menghitung mean dan standart devisiasi dari setiap fitur beserta setiap kelas pada data train</p></li>
+<li><p>tentukan suatu inputan data sepalLenght, sepalWidth, petalLength, petalWidth</p></li>
+<li><p>menghitung distribusi gausian setiap fitur serta setiap kelas pada data train</p></li>
+</ol>
+<img src="./image/image-20240403-204149.png" width="" align="" /><ol class="arabic simple" start="6">
+<li><p>menghitung posteriori dari setiap kelas</p></li>
+</ol>
+<img src="./image/image-20240403-204257.png" width="" align="" /><ol class="arabic simple" start="7">
+<li><p>menentukan maximum posteriori</p></li>
+<li><p>kelas yang mendapat posteriori maximum itu kelas dari data inputan baru</p></li>
+</ol>
+</section>
+<section id="implementasi-excel">
+<h2>implementasi excel<a class="headerlink" href="#implementasi-excel" title="Link to this heading">#</a></h2>
+<section id="membagi-data-menjadi-data-train-dan-data-test">
+<h3>membagi data menjadi data train dan data test<a class="headerlink" href="#membagi-data-menjadi-data-train-dan-data-test" title="Link to this heading">#</a></h3>
+<p>pada pembagiannya akan melakukan :</p>
+<ol class="arabic simple">
+<li><p>80% terdiri dari (40 iris-setosa, 40 iris-versicolor, 40 iris-virginica)</p></li>
+<li><p>20% terdiri dari (10 iris-setosa, 10 iris-versicolor, 10 iris-virginica)</p></li>
+</ol>
+<p>selanjutnya membuat beberapa shet untuk menyimpan data train dan data set</p>
+<ol class="arabic simple">
+<li><p>shet pertama untuk menyimpan data set</p></li>
+<li><p>shet kedua untuk menyimpan 40 iris-setosa</p></li>
+<li><p>shet ketiiga untuk menyimpan 40 iris-versicolor</p></li>
+<li><p>shet keempat untuk menyimpan 40 iris-verginica</p></li>
+</ol>
+</section>
+<section id="menghitung-probabilitas-pada-data-train">
+<h3>menghitung probabilitas pada data train<a class="headerlink" href="#menghitung-probabilitas-pada-data-train" title="Link to this heading">#</a></h3>
+<p>melakukan perhitungan probabilitas dari masing-masing kelas sesuai dengan jumlah data train pada kelas tersebut kemudian dibagi dengan banyaknya total data train</p>
+<p>P(a) : probabilitas</p>
+<p>n(a) : banyaknya record data train pada suatu kelas (40)</p>
+<p>N : total banyaknya record data train (40+40+40=120)Data Train	n(a)	p(a)</p>
+<img src="./image/image-20240403-205424.png" width="" align="" /></section>
+<section id="menghitung-standart-deviasi">
+<h3>menghitung standart deviasi<a class="headerlink" href="#menghitung-standart-deviasi" title="Link to this heading">#</a></h3>
+<p>menghitung mean dan standart deviasi dari masing-masing fitur pada kelas di data train
+untuk rumus di excel :</p>
+<p>mean : =AVERAGE()
+standart deviasi : =STDEV.P()Kelas Setosa</p>
+<img src="./image/image-20240403-222217.png" width="" align="" /><img src="./image/image-20240403-205950.png" width="" align="" /><img src="./image/image-20240403-210025.png" width="" align="" /></section>
+<section id="membuat-inputan">
+<h3>membuat inputan<a class="headerlink" href="#membuat-inputan" title="Link to this heading">#</a></h3>
+<p>membuat suatu data acak untuk inputan sepalLength, sepalWidth, petalLength, dan petalWidth. data ini akan digunakan untuk menguji hasil dari perhitungan excel, sehingga bisa tahu termasuk kelas apakah data inputan ini</p>
+<p>untuk detil inputan :</p>
+<ol class="arabic simple">
+<li><p>SepalLengthCm : 5</p></li>
+<li><p>SepalWidthCm : 2</p></li>
+<li><p>PetalLengthCm : 4</p></li>
+<li><p>PetalWidthCm : 2</p></li>
+</ol>
+<img src="./image/image-20240403-221555-20240403-151558.png" width="" align="" /></section>
+<section id="menghitung-distribusi-gaussian">
+<h3>menghitung distribusi gaussian<a class="headerlink" href="#menghitung-distribusi-gaussian" title="Link to this heading">#</a></h3>
+<p>setelah mean dan standart deviasi didapati dan sudah menentukan inputan. langkah selanjutnya memasukkan ke dalam rumus distribusi gausian</p>
+<img src="./image/image-20240403-221657.png" width="" align="" /></section>
+<section id="menghitung-posteriori">
+<h3>menghitung posteriori<a class="headerlink" href="#menghitung-posteriori" title="Link to this heading">#</a></h3>
+<p>langkah selanjutnya menentukan posteriorinya</p>
+<p>dimana :</p>
+<ul class="simple">
+<li><p>P(A|Hi) : hasil perkalian setiap fitur pada setiap kelas</p></li>
+</ul>
+<ul class="simple">
+<li><p>P(a) : probabilitas setiap kelas</p></li>
+</ul>
+<p>berikut hasil perhitungan pada kelas lain :</p>
+<img src="./image/image-20240403-221742.png" width="" align="" /></section>
+<section id="menentukan-maximum-posteriori">
+<h3>menentukan maximum posteriori<a class="headerlink" href="#menentukan-maximum-posteriori" title="Link to this heading">#</a></h3>
+<p>selanjutnya kita dapat menentukan nilai maximum pada posteriori yaitu pada kelas versicolor dengan nilai 2.3801</p>
+</section>
+<section id="kesimpulan">
+<h3>kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h3>
+<p>dari hasil perhitungan diatas dapat disimpulkan bahwa data dengan inputan sebagai berikut :</p>
+<ol class="arabic simple">
+<li><p>SepalLengthCm : 5</p></li>
+<li><p>SepalWidthCm : 2</p></li>
+<li><p>PetalLengthCm : 4</p></li>
+<li><p>PetalWidthCm : 2</p></li>
+</ol>
+<p>adalah kelas iris-versicolor, karena mengdapatkan nilai posteriori tertinggi</p>
+</section>
+<section id="implementasi-skylearn">
+<h3>implementasi skylearn<a class="headerlink" href="#implementasi-skylearn" title="Link to this heading">#</a></h3>
+<p>setelah melakukan prediksi kelas data baru dengan perhitungan manual, selanjutnya akan membuktikan apakah prediksi dari hasil perhitungan manual tersebut benar atau salah dengan cara membuat model melalui bantuan skylearn</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysql-connector-python
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">mysql.connector</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+
+<span class="c1"># koneksi ke database MySQL</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;datamining-tasya22022.a.aivencloud.com&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;avnadmin&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;AVNS_bsya-rWQfyVA9CtdGxk&quot;</span><span class="p">,</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="s2">&quot;24072&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;db_mysql&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Membaca data dari database menggunakan Pandas</span>
+<span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM tableName&quot;</span>
+<span class="n">data_iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+
+<span class="c1"># Menghapus kolom Id, dikarenakan kurang relevan</span>
+<span class="n">data_iris</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Id&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># memisahkan atribut dan label</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data_iris</span><span class="p">[[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalWidthCm&#39;</span> <span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data_iris</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span>
+ 
+<span class="c1"># Membagi dataset menjadi data latih &amp; data uji</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+ 
+<span class="c1"># membuat model Gaussian naive bayes</span>
+<span class="n">gnb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+ 
+<span class="c1"># Melatih model dengan menggunakan data latih</span>
+<span class="n">gnb_model</span> <span class="o">=</span> <span class="n">gnb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Evaluasi Model</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+ 
+<span class="n">acc_secore</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy: &#39;</span><span class="p">,</span> <span class="n">acc_secore</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mysql-connector-python
+  Downloading mysql_connector_python-8.3.0-cp39-cp39-manylinux_2_17_x86_64.whl (21.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">21.5/21.5 MB</span> <span class=" -Color -Color-Red">94.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: mysql-connector-python
+Successfully installed mysql-connector-python-8.3.0
+
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+/tmp/ipykernel_41/644161307.py:19: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  data_iris = pd.read_sql(sql_query, conn)
+Accuracy:  0.967
+</pre></div>
+</div>
+</div>
+</div>
+<p>untuk pengujian akan diberikan data iris sama seperti perhitungan excel :</p>
+<ol class="arabic simple">
+<li><p>SepalLengthCm : 5</p></li>
+<li><p>SepalWidthCm : 2</p></li>
+<li><p>PetalLengthCm : 4</p></li>
+<li><p>PetalWidthCm : 2</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Iris-versicolor&#39;]
+/shared-libs/python3.9/py/lib/python3.9/site-packages/sklearn/base.py:450: UserWarning: X does not have valid feature names, but GaussianNB was fitted with feature names
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
 <a style='text-decoration:none;line-height:16px;display:flex;color:#5B5B62;padding:10px;justify-content:end;' href='https://deepnote.com?utm_source=created-in-deepnote-cell&projectId=23905452-9db2-4401-b17a-b0565c5b6809' target="_blank">
 <img alt='Created in deepnote.com' style='display:inline;max-height:16px;margin:0px;margin-right:7.5px;' src='data:./image/image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+' > </img>
 Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2369,6 +2578,23 @@ Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></s
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-local-outlier-factor-lof">menghitung local outlier factor (LOF)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-menggunakan-python-scikit-learn">menghitung menggunakan python (scikit learn)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-local-outlier-factor-pada-data-iris">implementasi local outlier factor pada data iris</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-gaussian-naive-bayes">metode gaussian naive bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-naive-bayes">perhitungan manual naive bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-excel">implementasi excel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-data-train-dan-data-test">membagi data menjadi data train dan data test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-probabilitas-pada-data-train">menghitung probabilitas pada data train</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-standart-deviasi">menghitung standart deviasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-inputan">membuat inputan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-distribusi-gaussian">menghitung distribusi gaussian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-posteriori">menghitung posteriori</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-maximum-posteriori">menentukan maximum posteriori</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">kesimpulan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-skylearn">implementasi skylearn</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
