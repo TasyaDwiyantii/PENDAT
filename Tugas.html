@@ -60,8 +60,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas (1)';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,6 +121,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -176,28 +176,9 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">tools yang digunakan</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
@@ -444,7 +425,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-posteriori">menghitung posteriori</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-maximum-posteriori">menentukan maximum posteriori</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">kesimpulan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-skylearn">implementasi skylearn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-sklearn">implementasi sklearn</a></li>
 </ul>
 </li>
 </ul>
@@ -603,11 +584,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mysql-connector-python
-  Downloading mysql_connector_python-8.3.0-cp39-cp39-manylinux_2_17_x86_64.whl (21.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">21.5/21.5 MB</span> <span class=" -Color -Color-Red">54.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: mysql-connector-python
-Successfully installed mysql-connector-python-8.3.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mysql-connector-python in /root/venv/lib/python3.9/site-packages (8.3.0)
 
 <span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
 <span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
@@ -2319,15 +2296,17 @@ Successfully installed mysql-connector-python-8.3.0
 <h3>membagi data menjadi data train dan data test<a class="headerlink" href="#membagi-data-menjadi-data-train-dan-data-test" title="Link to this heading">#</a></h3>
 <p>pada pembagiannya akan melakukan :</p>
 <ol class="arabic simple">
-<li><p>80% terdiri dari (40 iris-setosa, 40 iris-versicolor, 40 iris-virginica)</p></li>
-<li><p>20% terdiri dari (10 iris-setosa, 10 iris-versicolor, 10 iris-virginica)</p></li>
+<li><p>80% terdiri dari (37 iris-setosa, 44 iris-versicolor, 39 iris-virginica)</p></li>
+<li><p>20% terdiri dari (13 iris-setosa, 6 iris-versicolor, 11 iris-virginica)</p></li>
 </ol>
-<p>selanjutnya membuat beberapa shet untuk menyimpan data train dan data set</p>
+<p>selanjutnya membuat beberapa sheet untuk menyimpan data train dan data test</p>
 <ol class="arabic simple">
-<li><p>shet pertama untuk menyimpan data set</p></li>
-<li><p>shet kedua untuk menyimpan 40 iris-setosa</p></li>
-<li><p>shet ketiiga untuk menyimpan 40 iris-versicolor</p></li>
-<li><p>shet keempat untuk menyimpan 40 iris-verginica</p></li>
+<li><p>sheet pertama untuk menyimpan data train</p></li>
+<li><p>sheet kedua untuk menyimpan data test</p></li>
+<li><p>sheet ketiiga untuk menyimpan 37 iris-setosa</p></li>
+<li><p>sheet keempat untuk menyimpan 44 iris-versicolor</p></li>
+<li><p>sheet kelima untuk menyimpan 39 iris virginica</p></li>
+<li><p>sheet keenam untuk menyimpan posteriori</p></li>
 </ol>
 </section>
 <section id="menghitung-probabilitas-pada-data-train">
@@ -2335,30 +2314,30 @@ Successfully installed mysql-connector-python-8.3.0
 <p>melakukan perhitungan probabilitas dari masing-masing kelas sesuai dengan jumlah data train pada kelas tersebut kemudian dibagi dengan banyaknya total data train</p>
 <p>P(a) : probabilitas</p>
 <p>n(a) : banyaknya record data train pada suatu kelas (40)</p>
-<p>N : total banyaknya record data train (40+40+40=120)Data Train	n(a)	p(a)</p>
-<img src="./image/image-20240403-205424.png" width="" align="" /></section>
+<p>N : total banyaknya record data train (37+44+39=120)</p>
+<img src="./image/image-20240404-194047.png" width="" align="" /></section>
 <section id="menghitung-standart-deviasi">
 <h3>menghitung standart deviasi<a class="headerlink" href="#menghitung-standart-deviasi" title="Link to this heading">#</a></h3>
 <p>menghitung mean dan standart deviasi dari masing-masing fitur pada kelas di data train
 untuk rumus di excel :</p>
 <p>mean : =AVERAGE()
-standart deviasi : =STDEV.P()Kelas Setosa</p>
-<img src="./image/image-20240403-222217.png" width="" align="" /><img src="./image/image-20240403-205950.png" width="" align="" /><img src="./image/image-20240403-210025.png" width="" align="" /></section>
+standart deviasi : =STDEV.P()</p>
+<img src="./image/image-20240404-193701.png" width="" align="" /><img src="./image/image-20240404-193733.png" width="" align="" /><img src="./image/image-20240404-193954.png" width="" align="" /></section>
 <section id="membuat-inputan">
 <h3>membuat inputan<a class="headerlink" href="#membuat-inputan" title="Link to this heading">#</a></h3>
 <p>membuat suatu data acak untuk inputan sepalLength, sepalWidth, petalLength, dan petalWidth. data ini akan digunakan untuk menguji hasil dari perhitungan excel, sehingga bisa tahu termasuk kelas apakah data inputan ini</p>
-<p>untuk detil inputan :</p>
+<p>untuk detail inputan :</p>
 <ol class="arabic simple">
-<li><p>SepalLengthCm : 5</p></li>
-<li><p>SepalWidthCm : 2</p></li>
-<li><p>PetalLengthCm : 4</p></li>
-<li><p>PetalWidthCm : 2</p></li>
+<li><p>SepalLengthCm : 6.5</p></li>
+<li><p>SepalWidthCm : 2.7</p></li>
+<li><p>PetalLengthCm : 5.1</p></li>
+<li><p>PetalWidthCm : 1.7</p></li>
 </ol>
-<img src="./image/image-20240403-221555-20240403-151558.png" width="" align="" /></section>
+<img src="./image/image-20240404-193357.png" width="" align="" /></section>
 <section id="menghitung-distribusi-gaussian">
 <h3>menghitung distribusi gaussian<a class="headerlink" href="#menghitung-distribusi-gaussian" title="Link to this heading">#</a></h3>
-<p>setelah mean dan standart deviasi didapati dan sudah menentukan inputan. langkah selanjutnya memasukkan ke dalam rumus distribusi gausian</p>
-<img src="./image/image-20240403-221657.png" width="" align="" /></section>
+<p>setelah mean dan standart deviasi didapati dan sudah menentukan inputan. langkah selanjutnya memasukkan ke dalam rumus distribusi gaussian</p>
+<img src="./image/image-20240404-193236.png" width="" align="" /></section>
 <section id="menghitung-posteriori">
 <h3>menghitung posteriori<a class="headerlink" href="#menghitung-posteriori" title="Link to this heading">#</a></h3>
 <p>langkah selanjutnya menentukan posteriorinya</p>
@@ -2370,25 +2349,25 @@ standart deviasi : =STDEV.P()Kelas Setosa</p>
 <li><p>P(a) : probabilitas setiap kelas</p></li>
 </ul>
 <p>berikut hasil perhitungan pada kelas lain :</p>
-<img src="./image/image-20240403-221742.png" width="" align="" /></section>
+<img src="./image/image-20240404-193046.png" width="" align="" /></section>
 <section id="menentukan-maximum-posteriori">
 <h3>menentukan maximum posteriori<a class="headerlink" href="#menentukan-maximum-posteriori" title="Link to this heading">#</a></h3>
-<p>selanjutnya kita dapat menentukan nilai maximum pada posteriori yaitu pada kelas versicolor dengan nilai 2.3801</p>
+<p>selanjutnya kita dapat menentukan nilai maximum pada posteriori yaitu pada kelas virginica dengan nilai 0.06431</p>
 </section>
 <section id="kesimpulan">
 <h3>kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h3>
 <p>dari hasil perhitungan diatas dapat disimpulkan bahwa data dengan inputan sebagai berikut :</p>
 <ol class="arabic simple">
-<li><p>SepalLengthCm : 5</p></li>
-<li><p>SepalWidthCm : 2</p></li>
-<li><p>PetalLengthCm : 4</p></li>
-<li><p>PetalWidthCm : 2</p></li>
+<li><p>SepalLengthCm : 6.5</p></li>
+<li><p>SepalWidthCm : 2.7</p></li>
+<li><p>PetalLengthCm : 5.1</p></li>
+<li><p>PetalWidthCm : 1.7</p></li>
 </ol>
-<p>adalah kelas iris-versicolor, karena mengdapatkan nilai posteriori tertinggi</p>
+<p>adalah kelas iris-virginica, karena mengdapatkan nilai posteriori tertinggi</p>
 </section>
-<section id="implementasi-skylearn">
-<h3>implementasi skylearn<a class="headerlink" href="#implementasi-skylearn" title="Link to this heading">#</a></h3>
-<p>setelah melakukan prediksi kelas data baru dengan perhitungan manual, selanjutnya akan membuktikan apakah prediksi dari hasil perhitungan manual tersebut benar atau salah dengan cara membuat model melalui bantuan skylearn</p>
+<section id="implementasi-sklearn">
+<h3>implementasi sklearn<a class="headerlink" href="#implementasi-sklearn" title="Link to this heading">#</a></h3>
+<p>setelah melakukan prediksi kelas data baru dengan perhitungan manual, selanjutnya akan membuktikan apakah prediksi dari hasil perhitungan manual tersebut benar atau salah dengan cara membuat model melalui bantuan sklearn</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysql-connector-python
@@ -2438,7 +2417,7 @@ standart deviasi : =STDEV.P()Kelas Setosa</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mysql-connector-python
   Downloading mysql_connector_python-8.3.0-cp39-cp39-manylinux_2_17_x86_64.whl (21.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">21.5/21.5 MB</span> <span class=" -Color -Color-Red">94.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">21.5/21.5 MB</span> <span class=" -Color -Color-Red">52.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hInstalling collected packages: mysql-connector-python
 Successfully installed mysql-connector-python-8.3.0
 
@@ -2453,21 +2432,71 @@ Accuracy:  0.967
 </div>
 <p>untuk pengujian akan diberikan data iris sama seperti perhitungan excel :</p>
 <ol class="arabic simple">
-<li><p>SepalLengthCm : 5</p></li>
-<li><p>SepalWidthCm : 2</p></li>
-<li><p>PetalLengthCm : 4</p></li>
-<li><p>PetalWidthCm : 2</p></li>
+<li><p>SepalLengthCm : 6.5</p></li>
+<li><p>SepalWidthCm : 2.7</p></li>
+<li><p>PetalLengthCm : 5.1</p></li>
+<li><p>PetalWidthCm : 1.7</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">6.5</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">]]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Iris-versicolor&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Iris-virginica&#39;]
 /shared-libs/python3.9/py/lib/python3.9/site-packages/sklearn/base.py:450: UserWarning: X does not have valid feature names, but GaussianNB was fitted with feature names
   warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysql-connector-python
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">mysql.connector</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+
+<span class="c1"># koneksi ke database MySQL</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;datamining-tasya22022.a.aivencloud.com&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;avnadmin&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;AVNS_bsya-rWQfyVA9CtdGxk&quot;</span><span class="p">,</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="s2">&quot;24072&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;db_mysql&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Membaca data dari database menggunakan Pandas</span>
+<span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM tableName&quot;</span>
+<span class="n">data_iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+
+<span class="c1"># Menghapus kolom Id, dikarenakan kurang relevan</span>
+<span class="n">data_iris</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Id&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># memisahkan atribut dan label</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data_iris</span><span class="p">[[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalWidthCm&#39;</span> <span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data_iris</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span>
+ 
+<span class="c1"># Membagi dataset menjadi data latih &amp; data uji</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">df1</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;datatrain&quot;</span><span class="p">,</span><span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">df1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;datatest&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mysql-connector-python in /root/venv/lib/python3.9/site-packages (8.3.0)
+
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+/tmp/ipykernel_34/754850874.py:19: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  data_iris = pd.read_sql(sql_query, conn)
 </pre></div>
 </div>
 </div>
@@ -2508,24 +2537,6 @@ Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></s
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="markdown.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Markdown Files</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="markdown-notebooks.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -2592,7 +2603,7 @@ Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></s
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-posteriori">menghitung posteriori</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-maximum-posteriori">menentukan maximum posteriori</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">kesimpulan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-skylearn">implementasi skylearn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-sklearn">implementasi sklearn</a></li>
 </ul>
 </li>
 </ul>
